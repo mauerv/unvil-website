@@ -1,0 +1,25 @@
+ <!-- HEADER -->
+
+        <div id="header">
+            <div id="figure-nav">
+                <div id="figure">
+                    <a href="/index_es"><%= image_tag 'unvil-logo.png' %></a>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li><a href="index_es"  class="<%= 'activado' if params[:action] == 'index_es' && params[:controller] == 'static'%>">Inicio</a></li>
+                        <li><a href="portfolio_es" class="<%= 'activado' if params[:controller] == 'works' %>">Portafolio</a></li>
+                        <li><a href="careers_es" class="<%= 'activado' if params[:action] == 'careers_es' %>">Carreras</a></li>
+                    </ul>
+                </div><!-- end nav -->
+            </div>
+            <div id="idioma">
+                <div class="language">
+                   <a href= "<% if params[:controller] == 'works'%><%= 'portfolio' %><% end %>
+                             <% if params[:controller] == 'static' %><%= 'careers' if params[:action] == 'careers_es'%><%= '/' if params[:action] == 'index_es'%><% end %>" title="English">En</a>
+                </div>
+                <div class="language">
+                   <a href="/es" class="language-active" title="Español">Es</a>
+                </div>
+            </div>
+        </div><!-- end header -->
