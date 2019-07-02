@@ -1,99 +1,87 @@
 <div class="container-portfolio">
-      <div class="careers-title work">
-          <li><%= image_tag 'developing.png' %> Our projects </li>
-      </div>
-
-	<ul id="filters" class="clearfix">
-		<li><span class="filter active" data-filter=".all">All</span></li>
-		<li><span class="filter" data-filter=".app">App</span></li>
-		<li><span class="filter" data-filter=".bot">Bot</span></li>
-		<li><span class="filter" data-filter=".brand">Brand</span></li>
-		<li><span class="filter" data-filter=".website">Web</span></li>
-	</ul>
-
-
-	<div id="portfoliolist">
+  <div class="careers-title work">
+    <li><%= image_tag 'developing.png' %> Our projects </li>
+  </div>
+  <ul id="filters" class="clearfix">
+    <li><span class="filter active" data-filter=".all">All</span></li>
+    <li><span class="filter" data-filter=".app">App</span></li>
+    <li><span class="filter" data-filter=".bot">Bot</span></li>
+    <li><span class="filter" data-filter=".brand">Brand</span></li>
+    <li><span class="filter" data-filter=".website">Web</span></li>
+  </ul>
+  <div id="portfoliolist">
     <% @works.each do |work| %>
-        	<div class="portfolio all <%= JSON.parse(work.categories).join(' ') %>" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
-  				<div class="portfolio-wrapper">
-  					<%= image_tag work.image %>
-  					<div class="label">
-  						<div class="label-text">
-  							<a class="text-title"><%= work.name %></a>
-  							<span class="text-categories"><%= JSON.parse(work.categories).join(' / ') %></span>
-  						</div>
-  						<div class="label-bg"></div>
-  					</div>
-  				</div>
-  			</div>
-    <%end %>
-	</div>
-</div>
-
-        <div class="modal fade bs-modal-lg modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel" data-backdrop="true">
-          <div class="modal-dialog"  role="dialog" >
-            <div class="modal-content" role='document'>
-
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Portfolio Item</h4>
-              </div>
-              <div class="modal-body">
-
-                <p class='work-description'></p>
-                <div class='portfolio-item-image-list'>
-                </div>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="blue-button" data-dismiss="modal">Close</button>
-              </div>
+      <div class="portfolio all <%= JSON.parse(work.categories).join(' ') %>" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
+        <div class="portfolio-wrapper">
+          <%= image_tag work.image %>
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title"><%= work.name %></a>
+              <span class="text-categories"><%= JSON.parse(work.categories).join(' / ') %></span>
             </div>
+            <div class="label-bg"></div>
+          </div>
         </div>
       </div>
+    <%end %>
+  </div>
+</div>
 
+<div class="modal fade bs-modal-lg modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel" data-backdrop="true">
+  <div class="modal-dialog"  role="dialog" >
+    <div class="modal-content" role='document'>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Portfolio Item</h4>
+      </div>
+      <div class="modal-body">
+        <p class='work-description'></p>
+        <div class='portfolio-item-image-list'>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="blue-button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-	<script type='text/javascript'>
-	    $(document).ready(function() {
-      	    $('.bs-modal-lg').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget) // Button that triggered the modal
-                var works = <%= raw @works.to_json %> // Turn Ruby array into JS array
-                var work_id = button.data('key') - 1 // Select the relevant work id
-                var work = works[work_id]; // Find the relevant work data in the array
-                var images = JSON.parse(work.images);
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('.bs-modal-lg').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var works = <%= raw @works.to_json %> // Turn Ruby array into JS array
+      var work_id = button.data('key') - 1 // Select the relevant work id
+      var work = works[work_id]; // Find the relevant work data in the array
+      var images = JSON.parse(work.images);
 
-                var modal = $(this) // Select the modal we're updating
+      var modal = $(this) // Select the modal we're updating
 
-                modal.find('.work-description').text(work.description);
-                modal.find('.modal-title').text(work.name);
+      modal.find('.work-description').text(work.description);
+      modal.find('.modal-title').text(work.name);
 
-               if (work.link) {
-                  modal.find('.modal-body').append('<div class="link-container"><a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visit the Site</a></div>')
-               }
+      if (work.link) {
+        modal.find('.modal-body').append('<div class="link-container"><a href="' + work.link  + '" target="_blank" class="blue-button portfolio-item-link">Visit the Site</a></div>')
+      }
 
-                var imageList = modal.find('.portfolio-item-image-list');
+      var imageList = modal.find('.portfolio-item-image-list');
 
+      images.forEach(function(element, index) {
+        if (index <= 1) {
+          imageList.append('<img src="' + element + '" class="portfolio-item-image"/>');
+        } else {
+          imageList.append('<img src="img/default.svg" data-src="' + element + '" class="lazyload portfolio-item-image"/>');
+        }
+      });
 
-                images.forEach(function(element, index) {
-                   if (index <= 1) {
-                     imageList.append('<img src="' + element + '" class="portfolio-item-image"/>');
-                   } else {
-                     imageList.append('<img src="img/default.svg" data-src="' + element + '" class="lazyload portfolio-item-image"/>');
-                   }
-                });
+      $(".portfolio-item-image-list").find("img").lazyLoadXT();
+    })
 
-                $(".portfolio-item-image-list").find("img").lazyLoadXT();
+    $('.bs-modal-lg').on('hide.bs.modal', function (event) {
+      var modal = $(this) // Select the modal we're updating
 
-
-
-	        })
-
-	        $('.bs-modal-lg').on('hide.bs.modal', function (event) {
-	            var modal = $(this) // Select the modal we're updating
-
-                modal.find('.portfolio-item-image-list').empty();
-                modal.find('.portfolio-item-link').remove();
-	        })
-        })
-
-	</script>
+      modal.find('.portfolio-item-image-list').empty();
+      modal.find('.portfolio-item-link').remove();
+    })
+  })
+</script>
