@@ -1,23 +1,23 @@
 <div id="header">
-    <div id="figure-nav">
-        <div id="figure">
-            <a href="/"><%= image_tag 'unvil-logo.png' %></a>
-        </div>
-        <div id="nav">
-            <ul>
-                <li><a href="/"  class="<%= 'activado' if params[:action] == 'index' && params[:controller] == 'static'%>">Home</a></li>
-                <li><a href="portfolio" class="<%= 'activado' if params[:controller] == 'works' %>">Portfolio</a></li>
-                <li><a href="careers" class="<%= 'activado' if params[:action] == 'careers' %>">Careers</a></li>
-            </ul>
-        </div>
+  <div id="figure-nav">
+    <div id="figure">
+      <a href="/"><%= image_tag 'unvil-logo.png' %></a>
     </div>
-    <div id="idioma">
-        <div class="language">
-           <a href="/en" class="language-active" title="English">En</a>
-        </div>
-        <div class="language">
-           <a href="<% if params[:controller] == 'works'%><%= 'portfolio_es' %><% end %>
-                    <% if params[:controller] == 'static'%><%= params[:action] + '_es' %><% end %>" title="Español">Es</a>
-        </div>
+    <div id="nav">
+      <ul>
+        <li><a href="/"  class="<%= 'activado' if params[:action] == 'index' && params[:controller] == 'static'%>">Home</a></li>
+        <li><a href="portfolio" class="<%= 'activado' if params[:controller] == 'works' %>">Portfolio</a></li>
+        <li><a href="careers" class="<%= 'activado' if params[:action] == 'careers' %>">Careers</a></li>
+      </ul>
     </div>
+  </div>
+  <div id="idioma">
+    <div class="language">
+      <a href="/en" class="language-active" title="English">En</a>
+    </div>
+    <div class="language">
+      <a href="<% if params[:controller] == 'works'%><%= 'portfolio_es' %><% end %>
+        <% if params[:controller] == 'static'%><%= params[:action] + '_es' %><% end %>" title="Español">Es</a>
+    </div>
+  </div>
 </div>

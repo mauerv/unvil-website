@@ -131,7 +131,7 @@ textarea { resize: vertical; }
     .careers { border-bottom: 1px solid #e6e6e6; margin: 20px 0 50px 0; padding-bottom: 30px; display: flex; justify-content: center;}
         .box-dialog { background-color: #f2f2f2; border-radius: 10px; border: 5px solid #e6e6e6; }
         .box-dialog p { color: #4E6D7C; font-family: "HelveticaNeueLTStd-Bd"; font-size: 1.7rem; line-height: 1.5; margin: 0; padding: 4% 2% 4% 8%;}
-        .careers-arrow { background: url(../img/careers-arrow.png); background-repeat: no-repeat; height: 37px; position: absolute; margin-top: 60px; margin-left: -25px; width: 31px; z-index: 50; }
+        .careers-arrow { background: image-url('careers-arrow.png'); background-repeat: no-repeat; height: 37px; position: absolute; margin-top: 60px; margin-left: -25px; width: 31px; z-index: 50; }
 
 .careers-work {display: flex; flex-wrap: wrap;}
     .careers-work h2 { color: #4E6D7C; margin-bottom: 28px; font-size: 2.5rem; }
@@ -152,7 +152,7 @@ textarea { resize: vertical; }
         .job-list li { color: #89949B; font-size: 1rem; padding: 5px 0; }
 
         .img-list { margin-right: 5px; }
-        .title-sky, .title-violet { background: url(../img/line-h.png); background-position: bottom; background-repeat: repeat-x; color: #30BEDA; font-size: 1.2rem;
+        .title-sky, .title-violet { background: image-url('line-h.png'); background-position: bottom; background-repeat: repeat-x; color: #30BEDA; font-size: 1.2rem;
                                     text-align: center; width: 100%; }
         .title-violet { color: #6184D0; }
 
@@ -259,7 +259,7 @@ textarea { resize: vertical; }
     #footer-content {width:86%;}
     #content-foot-data { float: left; }
         #content-brand { float: left; text-align: center; width: 400px; }
-            #brand { background: url(../img/line-dark-h.png); background-repeat: repeat-x; background-position: bottom; float: left; padding-bottom: 20px; width: 290px; }
+            #brand { background: image-url('line-dark-h.png'); background-repeat: repeat-x; background-position: bottom; float: left; padding-bottom: 20px; width: 290px; }
             #brand-below { float: left; color: #89949b; width: 100%; }
             #brand-below p { float: left; margin: 10px 0 0 20px; }
             #brand-below a { color: #89949b; float: left; margin: 10px 0 10px 10px; }
@@ -268,7 +268,7 @@ textarea { resize: vertical; }
         .foot-box { float: right; margin-right: 0px;}
             .foot-box-nav {margin-right:10%;}
             .foot-nav ul { list-style: none; }
-            .foot-nav li {  background: url(../img/line-dark-h.png); background-repeat: repeat-x; background-position: bottom; padding: 11px 0 6px 0; }
+            .foot-nav li {  background: image-url('line-dark-h.png'); background-repeat: repeat-x; background-position: bottom; padding: 11px 0 6px 0; }
             .foot-nav li a { color: #89949b; font-size: 18px; text-shadow: 1px 1px #151c1e;
                             -webkit-transition: all .3s ease-in-out;
                             -moz-transition: all .3s ease-in-out;
@@ -281,7 +281,7 @@ textarea { resize: vertical; }
                             transition: all .3s ease-in-out; }
 
             .social-net { margin-left: 25px; }
-            .social-net h3 { background: url(../img/line-dark-h.png); background-repeat: repeat-x; background-position: bottom; color: #fff; font-size: 18px; margin: 0; }
+            .social-net h3 { background: image-url('line-dark-h.png'); background-repeat: repeat-x; background-position: bottom; color: #fff; font-size: 18px; margin: 0; }
             .social-box { background-color: #bbbdbf; float: left; height: 50px; margin: 10px 5px 0 0; text-align: center; width: 50px; }
             .social-box:hover { box-shadow: inset 0 0 5px #000000; }
                 .social-box img { margin-top: 10px; }

@@ -1,75 +1,62 @@
+<div id="slider">
+  <div id="da-slider" class="da-slider">
+    <div class="da-slide">
+      <h2 style="color: #6184D0;">Apps Móviles</h2>
+      <p>IOS & Android con tecnología nativa. Aplicaciones complejas, más rápidas, con diseño a medida.</p>
+      <div class="da-img"><%= image_tag 'slider-mobile-app.png' %></div>
+    </div>
+    <div class="da-slide">
+      <h2 style="color: #EF753F;">Desarrollo Web</h2>
+      <p>E-commerce, blogs, aplicaciones web, sitios empresariales y más. </p>
+      <div class="da-img"><%= image_tag 'slider-web-dev.png' %></div>
+    </div>
+    <div class="da-slide">
+      <h2 style="color: #FFB25F;">Desarrollo Ágil</h2>
+      <p>Desarrollamos junto a nuestros clientes, con las últimas tecnologías y excelencia en diseño.</p>
+      <div class="da-img"><%= image_tag 'slider-software.png' %></div>
+    </div>
+  </div>
+</div>
+<div class="span5 box1">
+  <h3>Nuestra Misión</h3>
+  <p>Solo trabajamos sobre software del que estamos orgullosos de haber construido y creamos productos que nuestros clientes aman. Ningún proyecto es demasiado chico o demasiado grande, nos vamos a asegurar que el resultado sea justo lo que necesitás.</p>
+</div>
+<div class="span5">
+  <div class="imagen">
+    <%= image_tag 'agile234.jpg' %>
+  </div>
+</div>
+<div id="content-info">
+  <div class="index-info">
+    <h3 class="color-sky">Feedback Constante</h3>
+    <p>Si trabajás con nostoros vas a ser parte del equipo, mantieniendo constante comunicación y feedback sobre el desarrollo del producto. Así nos aseguramos que el resultado es lo que querés.</p>
+    <div class="index-info-img">
+      <%= image_tag 'feedback.png' %>
+    </div>
+  </div>
+  <div class="index-info">
+    <h3 class="color-blue">Metodología Agile</h3>
+    <p>La metodología Agile disminuye el tiempo de entrega del trabajo y aumenta la flexibilidad ante cambios y agregados futuros, incluso cuando el producto está terminado.
+      <br />
+    </p>
+    <div class="index-info-img">
+      <%= image_tag 'agile-meth.png' %>
+    </div>
+  </div>
+  <div class="index-info">
+    <h3 class="color-violet">La Más Alta Calidad</h3>
+    <p>Unvil está formado por un equipo multidisciplinario de diseñadores y desarrolladores. Las personas que trabajan con nostros aman programar y crear soluciones nuevas cada día.
+    <br /> <br /> </p>
+    <div class="index-info-img">
+      <%= image_tag 'quality.png' %>
+    </div>
+  </div>
+</div>
 
-
-            <!-- SLIDER -->
-            <div id="slider">
-                <div id="da-slider" class="da-slider">
-                    <div class="da-slide">
-                        <h2 style="color: #6184D0;">Apps Móviles</h2>
-                        <p>IOS & Android con tecnología nativa. Aplicaciones complejas, más rápidas, con diseño a medida.</p>
-
-                        <div class="da-img"><%= image_tag 'slider-mobile-app.png' %></div>
-                    </div>
-                    <div class="da-slide">
-                        <h2 style="color: #EF753F;">Desarrollo Web</h2>
-                        <p>E-commerce, blogs, aplicaciones web, sitios empresariales y más. </p>
-                        <div class="da-img"><%= image_tag 'slider-web-dev.png' %></div>
-                    </div>
-                    <div class="da-slide">
-                        <h2 style="color: #FFB25F;">Desarrollo Ágil</h2>
-                        <p>Desarrollamos junto a nuestros clientes, con las últimas tecnologías y excelencia en diseño.</p>
-                        <div class="da-img"><%= image_tag 'slider-software.png' %></div>
-                    </div>
-                </div><!-- end da-slider -->
-            </div><!-- end slider -->
-
-
-
-            <div class="span5 box1">
-                <h3>Nuestra Misión</h3>
-                <p>Solo trabajamos sobre software del que estamos orgullosos de haber construido y creamos productos que nuestros clientes aman. Ningún proyecto es demasiado chico o demasiado grande, nos vamos a asegurar que el resultado sea justo lo que necesitás.</p>
-            </div>
-            <div class="span5">
-                <div class="imagen">
-                    <%= image_tag 'agile234.jpg' %>
-                </div>
-            </div>
-
-            <div id="content-info">
-                <div class="index-info">
-                    <h3 class="color-sky">Feedback Constante</h3>
-                    <p>Si trabajás con nostoros vas a ser parte del equipo, mantieniendo constante comunicación y feedback sobre el desarrollo del producto. Así nos aseguramos que el resultado es lo que querés.</p>
-                    <div class="index-info-img">
-                        <%= image_tag 'feedback.png' %>
-                    </div>
-                </div><!-- end index-info -->
-                <div class="index-info">
-                    <h3 class="color-blue">Metodología Agile</h3>
-                    <p>La metodología Agile disminuye el tiempo de entrega del trabajo y aumenta la flexibilidad ante cambios y agregados futuros, incluso cuando el producto está terminado.
-                     <br />
-                    </p>
-                    <div class="index-info-img">
-                        <%= image_tag 'agile-meth.png' %>
-                    </div>
-                </div><!-- end index-info -->
-                <div class="index-info">
-                    <h3 class="color-violet">La Más Alta Calidad</h3>
-                    <p>Unvil está formado por un equipo multidisciplinario de diseñadores y desarrolladores. Las personas que trabajan con nostros aman programar y crear soluciones nuevas cada día.
-                    <br /> <br /> </p>
-                    <div class="index-info-img">
-                        <%= image_tag 'quality.png' %>
-                    </div>
-                </div><!-- end index-info -->
-            </div><!-- endcontent-info -->
-
-
-
-        <script type="text/javascript">
-            $(function() {
-                $('#da-slider').cslider({
-                    interval: 6000
-                });
-            });
-        </script>
-
-        <!--  Google Analytics Script -->
-        <%= render 'layouts/analytics'  %>
+<script type="text/javascript">
+  $(function() {
+    $('#da-slider').cslider({
+      interval: 6000
+    });
+  });
+</script>

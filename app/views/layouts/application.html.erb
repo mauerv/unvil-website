@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csp_meta_tag %>
     <%= csrf_meta_tags %>
-
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-          <title>Unvil</title>
-          <meta name="description" content="">
-          <meta name="viewport" content="width=device-width">
-
-          <link rel="icon" type="favicon/png" href="img/favicon.png">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Unvil</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="favicon/png" href="img/favicon.png">
   </head>
   <body>
     <% if params[:action] == "index" || params[:action] == "careers"%>

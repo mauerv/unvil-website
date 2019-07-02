@@ -1,38 +1,34 @@
+<div class="container-portfolio">
+      <div class="careers-title work">
+          <li><%= image_tag 'developing.png' %> Our projects </li>
+      </div>
 
-	<div class="container-portfolio">
-        <div class="careers-title work">
-            <li><%= image_tag 'developing.png' %> Our projects </li>
-        </div>
-
-		<ul id="filters" class="clearfix">
-			<li><span class="filter active" data-filter=".all">All</span></li>
-			<li><span class="filter" data-filter=".app">App</span></li>
-			<li><span class="filter" data-filter=".bot">Bot</span></li>
-			<li><span class="filter" data-filter=".brand">Brand</span></li>
-			<li><span class="filter" data-filter=".website">Web</span></li>
-		</ul>
+	<ul id="filters" class="clearfix">
+		<li><span class="filter active" data-filter=".all">All</span></li>
+		<li><span class="filter" data-filter=".app">App</span></li>
+		<li><span class="filter" data-filter=".bot">Bot</span></li>
+		<li><span class="filter" data-filter=".brand">Brand</span></li>
+		<li><span class="filter" data-filter=".website">Web</span></li>
+	</ul>
 
 
-		<div id="portfoliolist">
-
-		    <% @works.each do |work| %>
-            	<div class="portfolio all <%= JSON.parse(work.categories).join(' ') %>" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
-    				<div class="portfolio-wrapper">
-    					<%= image_tag work.image %>
-    					<div class="label">
-    						<div class="label-text">
-    							<a class="text-title"><%= work.name %></a>
-    							<span class="text-categories"><%= JSON.parse(work.categories).join(' / ') %></span>
-    						</div>
-    						<div class="label-bg"></div>
-    					</div>
-    				</div>
-    			</div>
-            <%end %>
-
-		</div>
-
-    </div>
+	<div id="portfoliolist">
+    <% @works.each do |work| %>
+        	<div class="portfolio all <%= JSON.parse(work.categories).join(' ') %>" data-cat="logo" data-toggle="modal" data-target=".bs-modal-lg" data-key="<%= work.id %>">
+  				<div class="portfolio-wrapper">
+  					<%= image_tag work.image %>
+  					<div class="label">
+  						<div class="label-text">
+  							<a class="text-title"><%= work.name %></a>
+  							<span class="text-categories"><%= JSON.parse(work.categories).join(' / ') %></span>
+  						</div>
+  						<div class="label-bg"></div>
+  					</div>
+  				</div>
+  			</div>
+    <%end %>
+	</div>
+</div>
 
         <div class="modal fade bs-modal-lg modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel" data-backdrop="true">
           <div class="modal-dialog"  role="dialog" >
@@ -101,7 +97,3 @@
         })
 
 	</script>
-
-
-    <!--  Google Analytics Script -->
-    <%= render 'layouts/analytics'  %>

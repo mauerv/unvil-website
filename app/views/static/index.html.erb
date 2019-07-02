@@ -1,72 +1,60 @@
 <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-            <!-- SLIDER -->
-            <div id="slider">
-                <div id="da-slider" class="da-slider">
-                    <div class="da-slide group">
-                        <h2 style="color: #6184D0;">Mobile App</h2>
-                        <p>IOS & Android with native technologies. Complex applications, faster and tailor made for you.</p>
-                        <div class="da-img small-img"><%= image_tag 'slider-mobile-app.png' %></div>
-                    </div>
-                    <div class="da-slide group">
-                        <h2 style="color: #EF753F;">Web <br> Development</h2>
-                        <p>E-commerce, blogs, web applications, landing sites and more.</p>
-                        <div class="da-img"><%= image_tag 'slider-web-dev.png' %></div>
-                    </div>
-                    <div class="da-slide group">
-                        <h2 style="color: #FFB25F;">Agile <br> Development</h2>
-                        <p>We develop with our clients, with the latest technologies and development practices.</p>
-                        <div class="da-img"><%= image_tag 'slider-software.png' %></div>
-                    </div>
-                </div><!-- end da-slider -->
-            </div><!-- end slider -->
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<div id="slider">
+  <div id="da-slider" class="da-slider">
+    <div class="da-slide group">
+      <h2 style="color: #6184D0;">Mobile App</h2>
+      <p>IOS & Android with native technologies. Complex applications, faster and tailor made for you.</p>
+      <div class="da-img small-img"><%= image_tag 'slider-mobile-app.png' %></div>
+    </div>
+    <div class="da-slide group">
+      <h2 style="color: #EF753F;">Web <br> Development</h2>
+      <p>E-commerce, blogs, web applications, landing sites and more.</p>
+      <div class="da-img"><%= image_tag 'slider-web-dev.png' %></div>
+    </div>
+    <div class="da-slide group">
+      <h2 style="color: #FFB25F;">Agile <br> Development</h2>
+      <p>We develop with our clients, with the latest technologies and development practices.</p>
+      <div class="da-img"><%= image_tag 'slider-software.png' %></div>
+    </div>
+  </div>
+</div>
+<div class="span5 box1">
+  <h3>Our Mission</h3>
+  <p>We only develop software that we're proud to have built and that make our clients love us. No project is too small or too big. We make sure that the final result is just what you need.</p>
+</div>
+<div class="imagen box2">
+  <%= image_tag 'agile234.jpg' %>
+</div>
+<div id="content-info">
+  <div class="index-info">
+    <h3 class="color-sky">Constant Feedback</h3>
+    <p>If you work with us, you’ll feel part of the team, having a constant double direction channel of feedback to ensure that the final product is just what you want.</p>
+    <div class="index-info-img">
+      <%= image_tag 'feedback.png' %>
+    </div>
+  </div>
+  <div class="index-info">
+    <h3 class="color-blue">Agile Methodologies</h3>
+    <p>Decreasing product delivery time and creating products more flexible to changes and future add-ons even after the product is finished.</p>
+    <div class="index-info-img">
+      <%= image_tag 'agile-meth.png' %>
+    </div>
+  </div>
+  <div class="index-info">
+    <h3 class="color-violet">Highest Quality</h3>
+    <p>Every person at Unvil working on your software does it because they love programming and creating new and different solutions every day. We will only deliver products that we’re proud of having mode. </p>
+    <div class="index-info-img">
+      <%= image_tag 'quality.png' %>
+    </div>
+  </div>
+</div>
 
-
-
-            <div class="span5 box1">
-                <h3>Our Mission</h3>
-                <p>We only develop software that we're proud to have built and that make our clients love us. No project is too small or too big. We make sure that the final result is just what you need.</p>
-            </div>
-            <div class="imagen box2">
-                <%= image_tag 'agile234.jpg' %>
-            </div>
-
-            <div id="content-info">
-                <div class="index-info">
-                    <h3 class="color-sky">Constant Feedback</h3>
-                    <p>If you work with us, you’ll feel part of the team, having a constant double direction channel of feedback to ensure that the final product is just what you want.</p>
-                    <div class="index-info-img">
-                        <%= image_tag 'feedback.png' %>
-                    </div>
-                </div><!-- end index-info -->
-                <div class="index-info">
-                    <h3 class="color-blue">Agile Methodologies</h3>
-                    <p>Decreasing product delivery time and creating products more flexible to changes and future add-ons even after the product is finished.</p>
-                    <div class="index-info-img">
-                        <%= image_tag 'agile-meth.png' %>
-                    </div>
-                </div><!-- end index-info -->
-                <div class="index-info">
-                    <h3 class="color-violet">Highest Quality</h3>
-                    <p>Every person at Unvil working on your software does it because they love programming and creating new and different solutions every day. We will only deliver products that we’re proud of having mode. </p>
-                    <div class="index-info-img">
-                        <%= image_tag 'quality.png' %>
-                    </div>
-                </div><!-- end index-info -->
-            </div><!-- endcontent-info -->
-
-
-
-  <script type="text/javascript">
-
-      $(document).ready(function() {
-          $('#da-slider').cslider({
-              interval: 6000   
-          });
-      });
-
-  </script>
-
-    <!--  Google Analytics Script -->
-    <%= render 'layouts/analytics'  %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#da-slider').cslider({
+      interval: 6000
+    });
+  });
+</script>
